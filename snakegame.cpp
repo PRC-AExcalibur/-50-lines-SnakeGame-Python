@@ -45,20 +45,20 @@ int main()
 			fps = -1;
 			cout << "fail";//碰墙壁或碰自己>>失败
 		}
-		else if (length == 8 * 8 - 1) {
+		else if (length == side * side - 1) {
 			fps = -1;
 			cout << "success";//全部吃到>>成功
 		}
 		else {
 			//渲染
-			string screen[8][8] = {};
-			for (int i1 = 0; i1 < 8; i1++) for (int i0 = 0; i0 < 8; i0++) screen[i0][i1] = {" ."};//填充空位
+			string screen[side][side] = {};
+			for (int i1 = 0; i1 < side; i1++) for (int i0 = 0; i0 < side; i0++) screen[i0][i1] = {" ."};//填充空位
 			screen[apple[0] - 1][apple[1] - 1] = "*.";
 			for (int i = 0; i < length; i = i + 1) screen[snake0[i] - 1][snake1[i] - 1] = "o.";
 			system("cls");
 			cout << "SCORE:" << (length - 2) << " FPS:" << fps << " Side:" << side << "\n";
-			for (int i1 = 0; i1 < 8; i1 ++) {
-				for (int i0 = 0; i0 < 8; i0 ++) cout << screen[i0][i1];
+			for (int i1 = 0; i1 < side; i1 ++) {
+				for (int i0 = 0; i0 < side; i0 ++) cout << screen[i0][i1];
 				cout<< "\n";
 			}
 		}
