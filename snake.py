@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 import os,keyboard,time,threading
 #初始设置
@@ -14,10 +11,6 @@ direction=np.array([1,0],dtype=int)  #方向向量
 snake=np.array([np.ceil(side/2),np.ceil(side/2)-direction])   #蛇身体位置
 applelist=np.array([4,2],dtype=int)  #苹果可能出现的空间
 apple=applelist      #苹果位置
-
-
-# In[2]:
-
 
 while fps!=-1:     
 #键盘输入
@@ -53,10 +46,3 @@ while fps!=-1:
         print((str(screen).replace("0"," ")).replace("8","*"))
 #时间循环    
         time.sleep(1/fps)
-
-
-# In[ ]:
-
-
-
-
